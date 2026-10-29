@@ -1,0 +1,60 @@
+/* Nothing You Could Do, Kimberly Geswein, SIL Open Font License 1.1 (fonts/OFL.txt) */
+@font-face {
+  font-family: "Nothing You Could Do";
+  src: url("/fonts/nothing-you-could-do-v1.woff") format("woff");
+  font-display: swap;
+}
+
+:root {
+  --paper: #F3EEE3;  /* drawing paper, off-white cream */
+  --ink:   #2B2925;  /* warm, almost black */
+  --pencil:#5F5A51;  /* pencil grey, 5.9:1 on paper (WCAG AA) */
+  --hand: "Nothing You Could Do", "Bradley Hand", "Segoe Print", cursive;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { background: var(--paper); }
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  color: var(--ink);
+  font-family: var(--hand);
+  background-color: var(--paper);
+}
+
+main { text-align: center; }
+
+h1 {
+  font-weight: 400;
+  font-size: clamp(2.6rem, 9vw, 5.2rem);
+  line-height: 1.15;
+  letter-spacing: .01em;
+}
+
+nav {
+  margin-top: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: clamp(1.3rem, 3.2vw, 1.6rem);
+}
+
+a {
+  color: var(--pencil);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+a:hover, a:focus-visible { color: var(--ink); }
+
+a:focus-visible { outline: 1px dashed var(--pencil); outline-offset: 6px; border-radius: 2px; }
+
+.github { display: inline-flex; padding: 4px; }
+
+@media (prefers-reduced-motion: reduce) { a { transition: none; } }
