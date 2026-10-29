@@ -53,8 +53,10 @@ a {
 
 a:hover, a:focus-visible { color: var(--ink); }
 
-a:focus-visible { outline: 1px dashed var(--pencil); outline-offset: 6px; border-radius: 2px; }
+a:focus-visible { outline: 2px dashed var(--pencil); outline-offset: 4px; border-radius: 2px; }
 
-.github { display: inline-flex; padding: 4px; }
+/* touch targets of about 44 x 44 px (WCAG 2.5.5) without changing the look */
+nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; }
+.github { min-width: 44px; justify-content: center; }
 
 @media (prefers-reduced-motion: reduce) { a { transition: none; } }
