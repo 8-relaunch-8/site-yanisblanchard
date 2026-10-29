@@ -1,0 +1,4 @@
+Contact: mailto:bonjour@yanisblanchard.com
+Expires: 2027-04-29T00:00:00.000Z
+Preferred-Languages: fr, en
+Canonical: https://yanisblanchard.com/.well-known/security.txt
