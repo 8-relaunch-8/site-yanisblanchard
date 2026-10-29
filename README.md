@@ -4,14 +4,14 @@ My personal landing page: a name, a contact, a link to GitHub. Nothing more, on 
 
 - Plain HTML and CSS: no framework, no build step, no JavaScript.
 - No tracker, no cookie, no third-party request. The font is self-hosted and subset to the few letters the page uses (3.5 kB).
-- Strict security headers (CSP, HSTS…) set in `sws.toml`, and a `security.txt` (RFC 9116).
-- Served by [Static Web Server](https://static-web-server.net/) (`sws.toml`). Only `public/` is served. Hosting: to be decided.
+- Strict security headers (CSP, HSTS…) set in `public/_headers`, and a `security.txt` (RFC 9116).
+- Hosted on [Cloudflare Pages](https://pages.cloudflare.com/): no build command, output directory `public/`.
 
 ## Layout
 
 ```
-public/      the website, the only folder served
-sws.toml     Static Web Server configuration (headers, cache)
+public/            the website, the only folder published
+public/_headers    HTTP headers, read by Cloudflare Pages and not served
 ```
 
 ## Font
